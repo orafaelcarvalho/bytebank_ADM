@@ -1,4 +1,5 @@
 ﻿using bytebank_ADM.Funcionarios;
+using bytebank_ADM.Parceria;
 using bytebank_ADM.SistemaInterno;
 using bytebank_ADM.Utilitario;
 
@@ -59,9 +60,11 @@ void UsarSistema()
     pedro.Nome = "Pedro Silva";
     Auxiliar roberto = new Auxiliar("123478");
     roberto.Nome = "Roberto Cardoso";
+    ParceiroComercial joao = new ParceiroComercial("joao", "senha");
 
     SistemaInterno sistemainterno = new SistemaInterno();
 
-    sistemainterno.Logar(rafael, "rafael", "tentasasorte");
+    sistemainterno.Logar(rafael, "rafael", "tentaasorte");
     sistemainterno.Logar(pedro, "pedro", "vacilao");
+    sistemainterno.Logar(joao, "joao", "senha");
 }
