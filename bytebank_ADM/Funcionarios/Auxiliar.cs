@@ -1,4 +1,5 @@
-﻿using System;
+﻿using bytebank_ADM.Utilitario;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace bytebank_ADM.Funcionarios
 {
-    public class Auxiliar : Funcionario
+    public class Auxiliar : Funcionario, IBonificavel
     {
-        public Auxiliar(string cpf) : base(cpf, 1500)
+        public Auxiliar(string nome, string cpf) : base(nome, cpf, 1500)
         {
 
         }
-        public override double GetBonificacao()
+        public double GetBonificacao()
         {
             return this.Salario * 0.2;
         }

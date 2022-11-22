@@ -1,4 +1,5 @@
 ﻿using bytebank_ADM.SistemaInterno;
+using bytebank_ADM.Utilitario;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace bytebank_ADM.Funcionarios
     {
         public string Login { get; set; }
         public string Senha { get; set; }
-        protected FuncionarioAutenticavel(string cpf, double salario, string login, string senha) : base(cpf, salario)
+        protected FuncionarioAutenticavel(string nome, string cpf, double salario, string login, string senha) : base(nome, cpf, salario)
         {
             this.Login = login;
             this.Senha = senha;

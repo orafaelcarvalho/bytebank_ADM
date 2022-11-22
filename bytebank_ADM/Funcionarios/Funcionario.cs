@@ -1,4 +1,5 @@
-﻿using System;
+﻿using bytebank_ADM.Utilitario;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,14 +14,14 @@ namespace bytebank_ADM.Funcionarios
         public double Salario { get; protected set; }
         public static int TotalDeFuncionarios { get; private set; }
 
-        public Funcionario(string cpf, double salario)
+        public Funcionario(string nome, string cpf, double salario)
         {
             this.Cpf = cpf;
             this.Salario = salario;
+            this.Nome = nome;
             TotalDeFuncionarios++;
             //Console.WriteLine("Criando funcionário");
         }
-        public abstract double GetBonificacao();
         public abstract void AumentarSalario();
     }
 }

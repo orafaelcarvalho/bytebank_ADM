@@ -32,19 +32,16 @@ using bytebank_ADM.Utilitario;
 
 #endregion
 
-//CalcularBonificacao();
-UsarSistema();
+CalcularBonificacao();
+//UsarSistema();
 
 void CalcularBonificacao()
 {
     GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
 
-    Diretor rafael = new Diretor("12345", "rafael", "tentaasorte");
-    rafael.Nome = "Rafael Souza";
-    GerenteDeContas pedro = new GerenteDeContas("43211", "pedro", "vacilao");
-    pedro.Nome = "Pedro Silva";
-    Auxiliar roberto = new Auxiliar("123478");
-    roberto.Nome = "Roberto Cardoso";
+    Diretor rafael = new Diretor("Rafael Souza", "12345", "rafael", "tentaasorte");    
+    GerenteDeContas pedro = new GerenteDeContas("Pedro Silva", "43211", "pedro", "vacilao");    
+    Auxiliar roberto = new Auxiliar("Roberto Cardoso", "123478");    
 
     gerenciador.Registrar(rafael);
     gerenciador.Registrar(pedro);    
@@ -54,12 +51,9 @@ void CalcularBonificacao()
 
 void UsarSistema()
 {
-    Diretor rafael = new Diretor("12345", "rafael", "tentaasorte");
-    rafael.Nome = "Rafael Souza";
-    GerenteDeContas pedro = new GerenteDeContas("43211", "pedro", "vacilao");
-    pedro.Nome = "Pedro Silva";
-    Auxiliar roberto = new Auxiliar("123478");
-    roberto.Nome = "Roberto Cardoso";
+    Diretor rafael = new Diretor("Rafael", "12345", "rafael", "tentaasorte");    
+    GerenteDeContas pedro = new GerenteDeContas("Pedro Silva", "43211", "pedro", "vacilao");
+    Auxiliar roberto = new Auxiliar("Roberto", "123478");    
     ParceiroComercial joao = new ParceiroComercial("joao", "senha");
 
     SistemaInterno sistemainterno = new SistemaInterno();
