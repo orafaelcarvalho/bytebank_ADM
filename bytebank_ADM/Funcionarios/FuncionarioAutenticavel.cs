@@ -5,18 +5,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace bytebank_ADM.Parceria
+namespace bytebank_ADM.Funcionarios
 {
-    public class ParceiroComercial : IAutenticavel
+    public abstract class FuncionarioAutenticavel : Funcionario, IAutenticavel
     {
         public string Login { get; set; }
         public string Senha { get; set; }
-
-        public ParceiroComercial(string login, string senha)
+        protected FuncionarioAutenticavel(string cpf, double salario, string login, string senha) : base(cpf, salario)
         {
             this.Login = login;
             this.Senha = senha;
-        }
+        }        
 
         public bool Autenticar(string login, string senha)
         {
